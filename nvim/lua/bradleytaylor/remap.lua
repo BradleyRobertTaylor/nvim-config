@@ -1,17 +1,17 @@
-vim.g.mapleader = " "
-
 local keymap = vim.keymap -- for conciseness
+
+vim.g.mapleader = " "
 
 ----------------------
 -- General Keymaps
 ----------------------
 
--- open terminal in horizontal split
-keymap.set("n", "<leader>i", "<C-w>s<CR>:terminal<CR>")
-
 -- move blocks of text
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- open netrw
+keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 -- cursor settings
 keymap.set("n", "J", "mzJ`z") -- keep cursor in place when appending next line
@@ -51,9 +51,6 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
-
--- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
