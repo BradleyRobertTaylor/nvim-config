@@ -10,9 +10,6 @@ vim.g.mapleader = " "
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- open netrw
-keymap.set("n", "<leader>e", vim.cmd.Ex)
-
 -- cursor settings
 keymap.set("n", "J", "mzJ`z") -- keep cursor in place when appending next line
 keymap.set("n", "<C-d>", "<C-d>zz") -- keep cursor in the middle when jumping by page
@@ -48,6 +45,9 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 ----------------------
 -- Plugin Keybinds
 ----------------------
+
+-- toggle nvim-tree
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization

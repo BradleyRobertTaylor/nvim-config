@@ -4,6 +4,14 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
+  -- Nvim tree file explorer
+  use({
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    }
+  })
+
   -- Fuzzy finding
   use({
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -13,6 +21,9 @@ return require('packer').startup(function(use)
 
   -- One Dark theme
   use('navarasu/onedark.nvim')
+
+  -- Tokyo night theme
+  use('folke/tokyonight.nvim')
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
